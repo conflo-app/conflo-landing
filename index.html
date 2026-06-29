@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conflo CRM turns WhatsApp Web into a high-performance workspace. Organize chats, manage custom contact profiles, use quick reply templates, and export chats to Excel.">
+    <meta name="keywords" content="whatsapp crm, whatsapp export, quick replies, whatsapp web, leads manager, chrome extension">
+    <meta name="author" content="Conflo App">
+    
+    <!-- Title Element -->
+    <title>Conflo CRM - WhatsApp Leads and Productivity Suite</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Light Glow Elements -->
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-left"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <div class="logo-wrapper">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">Conflo</span>
+            </div>
+            <nav class="site-nav">
+                <a href="#features" class="nav-link" id="nav-features-link">Features</a>
+                <a href="#export-showcase" class="nav-link" id="nav-export-link">Exports</a>
+                <a href="#pricing" class="nav-link" id="nav-pricing-link">Pricing</a>
+                <a href="#faq" class="nav-link" id="nav-faq-link">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://store.conflo.app" class="btn btn-secondary btn-small" id="nav-cta-premium">
+                    Purchase Now
+                </a>
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary btn-small" id="nav-cta-install">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">WhatsApp Web CRM</div>
+                    <h1 class="hero-title">Turn WhatsApp into a High-Performance CRM</h1>
+                    <p class="hero-description">
+                        Conflo CRM segments your contacts, stores custom profiles, speeds up outreach with templates, and exports groups to Excel—directly inside WhatsApp Web.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://chrome.google.com/webstore" class="btn btn-primary" id="hero-cta-primary">
+                            Add to Chrome (Free)
+                        </a>
+                        <a href="https://store.conflo.app" class="btn btn-secondary" id="hero-cta-premium">
+                            Purchase Now
+                        </a>
+                    </div>
+                    <div class="chrome-web-store-info">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <span>Highly rated. Install directly via Google Chrome Web Store.</span>
+                    </div>
+                </div>
+
+                <!-- Interactive CSS Extension Mockup (Light themed) -->
+                <div class="hero-visual">
+                    <div class="mockup-container">
+                        <div class="wa-header">
+                            <div class="wa-dots">
+                                <div class="wa-dot active"></div>
+                                <div class="wa-dot"></div>
+                                <div class="wa-dot"></div>
+                            </div>
+                            <span class="wa-header-title">web.whatsapp.com</span>
+                        </div>
+                        <div class="mockup-body">
+                            <!-- Left Chat list preview -->
+                            <div class="wa-chat-pane">
+                                <div class="mock-chat-row active">
+                                    <div class="mock-avatar">AB</div>
+                                    <div class="mock-chat-details">
+                                        <div class="mock-chat-name">Alex Brown</div>
+                                        <div class="mock-chat-badge">Unsaved</div>
+                                    </div>
+                                </div>
+                                <div class="mock-chat-row">
+                                    <div class="mock-avatar mock-avatar-2">SW</div>
+                                    <div class="mock-chat-details">
+                                        <div class="mock-chat-name">Sales Team Group</div>
+                                        <div class="mock-chat-badge" style="background-color: #6366f1;">Group</div>
+                                    </div>
+                                </div>
+                                <div class="mock-chat-row">
+                                    <div class="mock-avatar mock-avatar-3">EC</div>
+                                    <div class="mock-chat-details">
+                                        <div class="mock-chat-name">Acme Corp</div>
+                                        <div class="mock-chat-badge" style="background-color: #ec4899;">Enterprise</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Conflo Injected Sidebar -->
+                            <div class="conflo-sidebar-mock">
+                                <div class="sidebar-mock-header">
+                                    <div class="sidebar-mock-logo">
+                                        <span>Conflo</span> CRM
+                                    </div>
+                                    <span class="mock-badge-pill">Premium</span>
+                                </div>
+                                <div class="sidebar-tab-selectors">
+                                    <button class="mock-tab-btn active" data-tab="home" id="mock-btn-home">Home</button>
+                                    <button class="mock-tab-btn" data-tab="fields" id="mock-btn-fields">Profile</button>
+                                    <button class="mock-tab-btn" data-tab="replies" id="mock-btn-replies">Quick</button>
+                                    <button class="mock-tab-btn" data-tab="export" id="mock-btn-export">Export</button>
+                                </div>
+                                <div class="mock-tab-content">
+                                    <!-- Home Tab -->
+                                    <div class="tab-pane active" id="tab-home">
+                                        <p class="mock-label">Overview stats</p>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                            <div style="background: rgba(0,0,0,0.02); padding: 0.5rem; border-radius: 0.35rem; border: 1px solid var(--card-border);">
+                                                <p style="font-size: 0.55rem; color: var(--text-dim);">UNSAVED</p>
+                                                <p style="font-size: 1rem; font-weight: 800; color: var(--text-main);">28</p>
+                                            </div>
+                                            <div style="background: rgba(0,0,0,0.02); padding: 0.5rem; border-radius: 0.35rem; border: 1px solid var(--card-border);">
+                                                <p style="font-size: 0.55rem; color: var(--text-dim);">ENTERPRISE</p>
+                                                <p style="font-size: 1rem; font-weight: 800; color: var(--text-main);">12</p>
+                                            </div>
+                                        </div>
+                                        <div class="mock-field-group">
+                                            <span class="mock-label">Quick filter</span>
+                                            <div style="display: flex; gap: 0.25rem; flex-wrap: wrap;">
+                                                <span class="mock-badge-pill">🇺🇸 US (14)</span>
+                                                <span class="mock-badge-pill">🇬🇧 UK (8)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fields Tab -->
+                                    <div class="tab-pane" id="tab-fields">
+                                        <div class="mock-field-group">
+                                            <span class="mock-label">Lead Stage</span>
+                                            <span class="mock-badge-pill warning">Negotiation</span>
+                                        </div>
+                                        <div class="mock-field-group">
+                                            <span class="mock-label">Email Address</span>
+                                            <input type="text" class="mock-input" value="alex@example.com" readonly>
+                                        </div>
+                                        <div class="mock-field-group">
+                                            <span class="mock-label">Deal Value</span>
+                                            <input type="text" class="mock-input" value="$1,200" readonly>
+                                        </div>
+                                    </div>
+
+                                    <!-- Quick Replies Tab -->
+                                    <div class="tab-pane" id="tab-replies">
+                                        <div style="display: flex; flex-direction: column; gap: 0.35rem;">
+                                            <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--card-border); padding: 0.4rem; border-radius: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                                                <span style="font-weight: 700; font-size: 0.65rem;">/pricing_intro</span>
+                                                <span class="mock-badge-pill" style="font-size: 0.5rem; padding: 0.05rem 0.2rem;">Send</span>
+                                            </div>
+                                            <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--card-border); padding: 0.4rem; border-radius: 0.35rem; display: flex; justify-content: space-between; align-items: center;">
+                                                <span style="font-weight: 700; font-size: 0.65rem;">/follow_up_1</span>
+                                                <span class="mock-badge-pill" style="font-size: 0.5rem; padding: 0.05rem 0.2rem;">Send</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Export Tab -->
+                                    <div class="tab-pane" id="tab-export">
+                                        <div class="mock-field-group">
+                                            <span class="mock-label">Export type</span>
+                                            <span class="mock-badge-pill info">Excel (.xlsx)</span>
+                                        </div>
+                                        <div class="mock-field-group" style="margin-top: 0.5rem;">
+                                            <button class="btn btn-primary btn-small" style="font-size: 0.65rem; width: 100%; border-radius: 0.35rem;" disabled>Export 450 Contacts</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Core Capabilities</span>
+                    <h2 class="section-title">Everything you need to sell & support on WhatsApp</h2>
+                    <p class="section-description">
+                        Conflo integrates directly into your WhatsApp Web interface, adding features that feel native and lightning fast.
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">📂</div>
+                        <h3>Chat Segments</h3>
+                        <p>Segment chats into Saved, Unsaved, Group, and Enterprise tabs. Filter down instantly and view core customer distributions at a glance.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">🏷️</div>
+                        <h3>Custom Contact Fields</h3>
+                        <p>Track business leads effectively. Add note inputs, customer tags, and custom key-value profile sheets (Deal stage, Value, Emails) to any chat.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">⚡</div>
+                        <h3>Quick Template Replies</h3>
+                        <p>Speed up conversation flows. Select template cards, preview contents, attach media files, and send in 2 clicks. Prevents accidental sends.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">📤</div>
+                        <h3>Advanced Contact Exporters</h3>
+                        <p>Extract leads in one click. Filter by groups or labels, and export contacts to Excel (.xlsx), CSV, JSON, or vCard (.vcf) layouts.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">🔒</div>
+                        <h3>Privacy Toggles</h3>
+                        <p>Blur names and conversation snapshots dynamically in one click. Ensures customer confidentiality when working in public places.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">🚀</div>
+                        <h3>High-Performance Engine</h3>
+                        <p>Injected natively into the WhatsApp Web DOM. Zero lag, lightning-fast rendering, and operates securely behind WhatsApp modules.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Screenshot & Export Feature Showcase Section -->
+        <section class="export-showcase" id="export-showcase">
+            <div class="container export-showcase-grid">
+                <div class="export-showcase-content">
+                    <span class="section-tag">Powerful Data Exporter</span>
+                    <h2 class="export-showcase-title">Export Contact Lists and Group Members Instantly</h2>
+                    <p class="export-showcase-description">
+                        Conflo features a robust floating dashboard layout designed for macro tasks. Download active lists directly from chats, groups, labels, or broadcasts.
+                    </p>
+                    <ul class="export-bullets-list">
+                        <li>
+                            <strong>Flexible Columns:</strong> Choose which attributes to include: Serialized IDs, WANames, Phone numbers, Country, ISO2 Codes, and custom CRM values.
+                        </li>
+                        <li>
+                            <strong>Multiple Formats:</strong> Compile data natively into Excel (`.xlsx`), standard CSV files, structured JSON datasets, or vCard formats.
+                        </li>
+                        <li>
+                            <strong>Lead Filtering:</strong> Strip system groups, exclude WhatsApp Business features, and filter countries dynamically prior to packaging.
+                        </li>
+                    </ul>
+                </div>
+                <div class="export-showcase-visual">
+                    <div class="screenshot-container shadow-premium animate-hover">
+                        <img src="export_page_conflo.png" alt="Conflo CRM Premium Exporter Dashboard Interface" class="product-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Flexible Pricing Plans</span>
+                    <h2 class="section-title">Simple, Transparent Pricing</h2>
+                    <p class="section-description">
+                        Unlock unlimited contact exports, custom field schema profile cards, templates, and priority developer support.
+                    </p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Quarterly Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <span class="plan-name">Quarterly Plan</span>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">
+                                Perfect for short-term outreach tasks.
+                            </p>
+                            <div class="plan-price-wrapper">
+                                <span class="plan-price">$15</span>
+                                <span class="plan-period">/ quarter</span>
+                            </div>
+                            <span class="plan-equivalent">Equivalent to $5.00 / month</span>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>Unlimited contacts & groups exports</li>
+                            <li>Full custom contact fields schema</li>
+                            <li>Custom notes & profile metadata cards</li>
+                            <li>Unlimited templates & keyword search</li>
+                            <li>Multi-device license registration</li>
+                        </ul>
+
+                        <a href="https://store.conflo.app" class="btn btn-secondary text-center" style="width: 100%; border-radius: 0.5rem; justify-content: center;" id="pricing-cta-quarterly">
+                            Purchase Now
+                        </a>
+                    </div>
+
+                    <!-- Yearly Plan -->
+                    <div class="pricing-card popular">
+                        <div class="pricing-badge">Save 17%</div>
+                        <div class="pricing-card-header">
+                            <span class="plan-name">Yearly Plan</span>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">
+                                Best value for active marketing pipelines.
+                            </p>
+                            <div class="plan-price-wrapper">
+                                <span class="plan-price">$50</span>
+                                <span class="plan-period">/ year</span>
+                            </div>
+                            <span class="plan-equivalent">Equivalent to $4.17 / month</span>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>All features in the Quarterly plan</li>
+                            <li>Access to upcoming Campaigns & Broadcast features</li>
+                            <li>Priority developer support & feature requests</li>
+                            <li>17% savings compared to quarterly billing</li>
+                        </ul>
+
+                        <a href="https://store.conflo.app" class="btn btn-primary text-center" style="width: 100%; border-radius: 0.5rem; justify-content: center;" id="pricing-cta-yearly">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Answering Questions</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q-1">
+                            <span>How does Conflo CRM connect to WhatsApp?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Conflo runs as a Chrome Extension that injects a secure sidebar directly into the WhatsApp Web page. It interacts natively with the browser's DOM elements without modifying WhatsApp's core code.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q-2">
+                            <span>Is my data secure?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Conflo values your privacy. All contact cards, custom properties, and templates are stored locally on your device using IndexedDB and chrome.storage.local. No customer chats or phone data are sent to external servers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q-3">
+                            <span>What limits apply to the free trial?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The free trial allows you to use all interface features. For exports, the trial masks or limits the contact count to 6 rows. Upgrading to a premium license instantly removes all export boundaries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to Supercharge WhatsApp?</h2>
+                    <p>Install the Conflo extension and start organizing your business chats in under 60 seconds.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; width: 100%;">
+                        <a href="https://chrome.google.com/webstore" class="btn btn-primary" id="footer-cta-install">
+                            Add to Chrome (Free)
+                        </a>
+                        <a href="https://store.conflo.app" class="btn btn-secondary" id="footer-cta-premium">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-copyright">
+                &copy; 2026 Conflo. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#" id="footer-link-terms">Terms of Service</a>
+                <a href="#" id="footer-link-privacy">Privacy Policy</a>
+                <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
