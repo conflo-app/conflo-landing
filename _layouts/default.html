@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}Conflo CRM turns WhatsApp Web into a high-performance workspace. Organize chats, manage custom contact profiles, use quick reply templates, and export chats to Excel.{% endif %}">
+    <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}whatsapp crm, whatsapp export, quick replies, whatsapp web, leads manager, chrome extension{% endif %}">
+    <meta name="author" content="Conflo App">
+    
+    <!-- Title Element -->
+    <title>{% if page.title %}{{ page.title }}{% else %}Conflo CRM - WhatsApp Leads and Productivity Suite{% endif %}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHZLX9DKB5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WHZLX9DKB5');
+    </script>
+</head>
+<body>
+
+    <!-- Ambient Light Glow Elements -->
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-left"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="{{ '/' | relative_url }}" class="logo-wrapper">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">Conflo</span>
+            </a>
+            <nav class="site-nav">
+                <a href="{{ '/#features' | relative_url }}" class="nav-link" id="nav-features-link">Features</a>
+                <a href="{{ '/#export-showcase' | relative_url }}" class="nav-link" id="nav-export-link">Exports</a>
+                <a href="{{ '/#pricing' | relative_url }}" class="nav-link" id="nav-pricing-link">Pricing</a>
+                <a href="{{ '/guides/' | relative_url }}" class="nav-link {% if page.url contains '/guides/' %}active{% endif %}" id="nav-guides-link" {% if page.url contains '/guides/' %}style="color: var(--brand-primary); font-weight: 700;"{% endif %}>Guides</a>
+                <a href="{{ '/#faq' | relative_url }}" class="nav-link" id="nav-faq-link">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://store.conflo.app" class="btn btn-secondary btn-small" id="nav-cta-premium">
+                    Purchase Now
+                </a>
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary btn-small" id="nav-cta-install">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    {{ content }}
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-copyright">
+                &copy; 2026 Conflo. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="{{ '/guides/' | relative_url }}" id="footer-link-guides">Guides</a>
+                <a href="{{ '/terms/' | relative_url }}" id="footer-link-terms">Terms of Service</a>
+                <a href="{{ '/privacy/' | relative_url }}" id="footer-link-privacy">Privacy Policy</a>
+                <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    {% if page.show_app_js %}
+    <script src="{{ '/app.js' | relative_url }}"></script>
+    {% endif %}
+</body>
+</html>

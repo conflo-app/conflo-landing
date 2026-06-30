@@ -1,59 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conflo CRM Knowledge Base. Explore step-by-step guides on setting up, exporting, and managing WhatsApp leads.">
-    <meta name="author" content="Conflo App">
-    <title>Knowledge Base & Guides - Conflo CRM</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
-    
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="../style.css">
-    
-    <!-- Google Tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHZLX9DKB5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-WHZLX9DKB5');
-    </script>
-</head>
-<body>
-
-    <!-- Ambient Light Glow Elements -->
-    <div class="ambient-glow"></div>
-    <div class="ambient-glow-left"></div>
-
-    <!-- Header Navigation -->
-    <header class="site-header">
-        <div class="container nav-wrapper">
-            <a href="../index.html" class="logo-wrapper">
-                <div class="logo-icon">C</div>
-                <span class="logo-text">Conflo</span>
-            </a>
-            <nav class="site-nav">
-                <a href="../index.html#features" class="nav-link" id="nav-features-link">Features</a>
-                <a href="../index.html#export-showcase" class="nav-link" id="nav-export-link">Exports</a>
-                <a href="../index.html#pricing" class="nav-link" id="nav-pricing-link">Pricing</a>
-                <a href="./" class="nav-link active" id="nav-guides-link" style="color: var(--brand-primary); font-weight: 700;">Guides</a>
-                <a href="../index.html#faq" class="nav-link" id="nav-faq-link">FAQ</a>
-            </nav>
-            <div class="nav-actions">
-                <a href="https://store.conflo.app" class="btn btn-secondary btn-small" id="nav-cta-premium">
-                    Purchase Now
-                </a>
-                <a href="https://chrome.google.com/webstore" class="btn btn-primary btn-small" id="nav-cta-install">
-                    Install Free
-                </a>
-            </div>
-        </div>
-    </header>
-
+---
+layout: default
+title: "Knowledge Base & Guides - Conflo CRM"
+description: "Conflo CRM Knowledge Base. Explore step-by-step guides on setting up, exporting, and managing WhatsApp leads."
+---
     <!-- Main Content -->
     <main class="container">
         
@@ -77,85 +26,29 @@
         <section class="guides-section">
             <div class="guides-grid" id="guides-card-grid">
                 
-                <!-- Guide Card 1: Setup -->
-                <article class="guide-card" data-keywords="setup install extension chrome sidebar activation license login">
-                    <div class="guide-card-icon-box">⚙️</div>
+                {% assign sorted_guides = site.guides | sort: 'order' %}
+                {% for guide in sorted_guides %}
+                <article class="guide-card" data-keywords="{{ guide.keywords }}">
+                    <div class="guide-card-icon-box">{{ guide.icon | default: '📄' }}</div>
                     <div class="guide-card-content">
-                        <h3>Setting Up Conflo CRM</h3>
-                        <p>Learn how to install the extension, open the injection sidebar inside WhatsApp Web, and activate your premium key.</p>
+                        <h3>{{ guide.breadcrumb_title | default: guide.title }}</h3>
+                        <p>{{ guide.description }}</p>
                     </div>
+                    {% if guide.topics %}
                     <ul class="guide-card-topics">
-                        <li>Chrome Web Store Installation</li>
-                        <li>Activating the Native Sidebar</li>
-                        <li>Binding License & Devices</li>
+                        {% for topic in guide.topics %}
+                        <li>{{ topic }}</li>
+                        {% endfor %}
                     </ul>
-                    <a href="setup/" class="btn btn-secondary guide-card-btn" id="guide-link-setup">Read Guide →</a>
+                    {% endif %}
+                    <a href="{{ guide.url | relative_url }}" class="btn btn-secondary guide-card-btn" id="guide-link-{{ guide.url | split: '/' | last }}">Read Guide →</a>
                 </article>
-
-                <!-- Guide Card 2: Exporting -->
-                <article class="guide-card" data-keywords="export xlsx csv vcard contact group segment whatsapp download raw leads">
-                    <div class="guide-card-icon-box">📤</div>
-                    <div class="guide-card-content">
-                        <h3>Exporting Contacts & Groups</h3>
-                        <p>Extract your lead segments, group participant lists, or custom labels into Excel, CSV, or vCard files in a single click.</p>
-                    </div>
-                    <ul class="guide-card-topics">
-                        <li>Selecting Contacts & Groups</li>
-                        <li>Configuring Columns & Formatting</li>
-                        <li>Excel, CSV, and vCard Workflows</li>
-                    </ul>
-                    <a href="export/" class="btn btn-secondary guide-card-btn" id="guide-link-export">Read Guide →</a>
-                </article>
-
-                <!-- Guide Card 3: Templates -->
-                <article class="guide-card" data-keywords="templates quick reply text message keyword responses templates workflow speed">
-                    <div class="guide-card-icon-box">⚡</div>
-                    <div class="guide-card-content">
-                        <h3>Quick Template Replies</h3>
-                        <p>Save time on routine client communications by setting up custom, dynamic reply templates for one-click dispatch.</p>
-                    </div>
-                    <ul class="guide-card-topics">
-                        <li>Creating Template Collections</li>
-                        <li>Dynamic Tagging & Parameters</li>
-                        <li>Dispatching Quick Replies</li>
-                    </ul>
-                    <a href="templates/" class="btn btn-secondary guide-card-btn" id="guide-link-templates">Read Guide →</a>
-                </article>
-
-                <!-- Guide Card 4: CRM Profiles -->
-                <article class="guide-card" data-keywords="crm profiles fields metadata custom notes deals segment value save emails leads">
-                    <div class="guide-card-icon-box">🏷️</div>
-                    <div class="guide-card-content">
-                        <h3>Custom Contact Fields</h3>
-                        <p>Keep track of customer details. Add emails, deal stages, specific client values, and notes directly onto WhatsApp chats.</p>
-                    </div>
-                    <ul class="guide-card-topics">
-                        <li>Setting Up Contact Fields</li>
-                        <li>Managing Notes & Deal Stages</li>
-                        <li>Local Cache Storage Backups</li>
-                    </ul>
-                    <a href="profiles/" class="btn btn-secondary guide-card-btn" id="guide-link-profiles">Read Guide →</a>
-                </article>
+                {% endfor %}
 
             </div>
         </section>
 
     </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-wrapper">
-            <div class="footer-copyright">
-                &copy; 2026 Conflo. All rights reserved.
-            </div>
-            <div class="footer-links">
-                <a href="./" id="footer-link-guides">Guides</a>
-                <a href="../terms/" id="footer-link-terms">Terms of Service</a>
-                <a href="../privacy/" id="footer-link-privacy">Privacy Policy</a>
-                <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
-            </div>
-        </div>
-    </footer>
 
     <!-- Simple client-side search logic to make the guide directory interactive -->
     <script>
@@ -183,5 +76,3 @@
             }
         });
     </script>
-</body>
-</html>
