@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to configure quick reply message templates inside Conflo CRM to speed up WhatsApp client communication.">
+    <meta name="author" content="Conflo App">
+    <title>Using Quick Reply Templates - Conflo CRM Guide</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHZLX9DKB5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WHZLX9DKB5');
+    </script>
+</head>
+<body>
+
+    <!-- Ambient Light Glow Elements -->
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-left"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../../index.html" class="logo-wrapper">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">Conflo</span>
+            </a>
+            <nav class="site-nav">
+                <a href="../../index.html#features" class="nav-link" id="nav-features-link">Features</a>
+                <a href="../../index.html#export-showcase" class="nav-link" id="nav-export-link">Exports</a>
+                <a href="../../index.html#pricing" class="nav-link" id="nav-pricing-link">Pricing</a>
+                <a href="../../guides/" class="nav-link active" id="nav-guides-link" style="color: var(--brand-primary); font-weight: 700;">Guides</a>
+                <a href="../../index.html#faq" class="nav-link" id="nav-faq-link">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://store.conflo.app" class="btn btn-secondary btn-small" id="nav-cta-premium">
+                    Purchase Now
+                </a>
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary btn-small" id="nav-cta-install">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-top: 3.5rem; padding-bottom: 7rem;">
+        
+        <!-- Breadcrumbs -->
+        <nav class="guide-nav-breadcrumb">
+            <a href="../../guides/">All Guides</a>
+            <span>/</span>
+            <span style="color: var(--text-main); font-weight: 600;">Quick Reply Templates</span>
+        </nav>
+
+        <div class="guide-layout">
+            
+            <!-- Left Sidebar (TOC) -->
+            <aside class="guide-sidebar">
+                <div class="guide-toc-card">
+                    <h3 class="guide-toc-title">On This Page</h3>
+                    <ul class="guide-toc-list">
+                        <li><a href="#creation" class="guide-toc-link active" id="toc-link-creation">1. Template Setup</a></li>
+                        <li><a href="#variables" class="guide-toc-link" id="toc-link-variables">2. Dynamic Placeholders</a></li>
+                        <li><a href="#sending" class="guide-toc-link" id="toc-link-sending">3. Dispatching Replies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="legal-card highlight" style="margin: 0; padding: 1.5rem;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Pro Tip</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Organize templates with keyboard shortcuts like <code>/pricing</code> or <code>/hello</code> to find them instantly during live chats.</p>
+                </div>
+            </aside>
+
+            <!-- Right Body Content -->
+            <article class="guide-body-content">
+                <div class="legal-header" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem;">
+                    <span class="legal-badge">Templates Guide</span>
+                    <h1 style="font-size: 3rem;">Quick Template Replies</h1>
+                    <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 0.5rem;">Learn how to configure, tag, and send pre-saved text responses directly to leads inside WhatsApp Web to speed up workflows.</p>
+                </div>
+
+                <div class="legal-content" style="gap: 1.5rem;">
+                    
+                    <section id="creation" class="legal-section">
+                        <h2>1. Creating Your Templates</h2>
+                        <p>Save drafts of common responses—such as product intros, pricing sheets, or follow-ups—so you never have to retype them.</p>
+                        
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">1</div>
+                            <div class="guide-step-details">
+                                <h4>Open Quick Tab</h4>
+                                <p>Click the <strong>Quick</strong> tab inside the injected Conflo sidebar overlay on WhatsApp Web.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">2</div>
+                            <div class="guide-step-details">
+                                <h4>Create a Template Card</h4>
+                                <p>Click the <strong>+ Add Template</strong> button. Enter a trigger keyword shortcut (e.g. <code>/intro</code>) and write your message body in the textbox.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="variables" class="legal-section">
+                        <h2>2. Dynamic Placeholder Tags</h2>
+                        <p>Personalize templates automatically by utilizing variables matching the active contact's metadata.</p>
+                        
+                        <div class="legal-card" style="margin: 1rem 0; padding: 1.25rem;">
+                            <p style="margin-bottom: 0.5rem; font-weight: 600; color: var(--text-main);">Available Tags:</p>
+                            <ul style="padding-left: 1rem; margin: 0;">
+                                <li><code>{{name}}</code>: Replaced by the contact's WhatsApp display name.</li>
+                                <li><code>{{email}}</code>: Replaced by the email address saved on their CRM profile.</li>
+                                <li><code>{{value}}</code>: Replaced by the deal value stored on their CRM profile.</li>
+                            </ul>
+                            <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted); font-style: italic;">Example: "Hi {{name}}, here is the pricing quote we discussed..."</p>
+                        </div>
+                    </section>
+
+                    <section id="sending" class="legal-section">
+                        <h2>3. Dispatching Quick Replies</h2>
+                        <p>Dispatch reply templates with built-in preview tools to prevent accidental message triggers.</p>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">3</div>
+                            <div class="guide-step-details">
+                                <h4>Select the Chat Session</h4>
+                                <p>Click on any chat session in your WhatsApp contact list. The Conflo sidebar will load the active contact details.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">4</div>
+                            <div class="guide-step-details">
+                                <h4>Preview and Send</h4>
+                                <p>Locate your template inside the <strong>Quick</strong> tab list. Hover over the template card to review the compiled placeholder text. Click <strong>Send</strong> to drop it directly into the text box and dispatch instantly.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Next Guide Navigation -->
+                    <div style="margin-top: 3.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--card-border); padding-top: 2rem;">
+                        <a href="../export/" class="btn btn-secondary btn-small">← Back to Export Guide</a>
+                        <a href="../profiles/" class="btn btn-primary btn-small">Next Guide: Custom Fields →</a>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-copyright">
+                &copy; 2026 Conflo. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="../../guides/" id="footer-link-guides">Guides</a>
+                <a href="../../terms/" id="footer-link-terms">Terms of Service</a>
+                <a href="../../privacy/" id="footer-link-privacy">Privacy Policy</a>
+                <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Active TOC highlighting script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('.guide-toc-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

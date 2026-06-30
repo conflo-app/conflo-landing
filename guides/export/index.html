@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to export WhatsApp contacts and group participants to Excel and CSV with Conflo CRM.">
+    <meta name="author" content="Conflo App">
+    <title>Exporting WhatsApp Contacts & Groups - Conflo CRM Guide</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHZLX9DKB5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WHZLX9DKB5');
+    </script>
+</head>
+<body>
+
+    <!-- Ambient Light Glow Elements -->
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-left"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../../index.html" class="logo-wrapper">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">Conflo</span>
+            </a>
+            <nav class="site-nav">
+                <a href="../../index.html#features" class="nav-link" id="nav-features-link">Features</a>
+                <a href="../../index.html#export-showcase" class="nav-link" id="nav-export-link">Exports</a>
+                <a href="../../index.html#pricing" class="nav-link" id="nav-pricing-link">Pricing</a>
+                <a href="../../guides/" class="nav-link active" id="nav-guides-link" style="color: var(--brand-primary); font-weight: 700;">Guides</a>
+                <a href="../../index.html#faq" class="nav-link" id="nav-faq-link">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://store.conflo.app" class="btn btn-secondary btn-small" id="nav-cta-premium">
+                    Purchase Now
+                </a>
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary btn-small" id="nav-cta-install">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-top: 3.5rem; padding-bottom: 7rem;">
+        
+        <!-- Breadcrumbs -->
+        <nav class="guide-nav-breadcrumb">
+            <a href="../../guides/">All Guides</a>
+            <span>/</span>
+            <span style="color: var(--text-main); font-weight: 600;">Exporting Contacts & Groups</span>
+        </nav>
+
+        <div class="guide-layout">
+            
+            <!-- Left Sidebar (TOC) -->
+            <aside class="guide-sidebar">
+                <div class="guide-toc-card">
+                    <h3 class="guide-toc-title">On This Page</h3>
+                    <ul class="guide-toc-list">
+                        <li><a href="#segments" class="guide-toc-link active" id="toc-link-segments">1. Filter List Segments</a></li>
+                        <li><a href="#columns" class="guide-toc-link" id="toc-link-columns">2. Configure Exporter Fields</a></li>
+                        <li><a href="#formats" class="guide-toc-link" id="toc-link-formats">3. File Format Selection</a></li>
+                        <li><a href="#groups" class="guide-toc-link" id="toc-link-groups">4. Group Member Exports</a></li>
+                    </ul>
+                </div>
+                
+                <div class="legal-card highlight" style="margin: 0; padding: 1.5rem;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Backup Reminder</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Since Conflo is 100% offline, local CRM tags are not synced to the cloud. Export data regularly to avoid losing lists.</p>
+                </div>
+            </aside>
+
+            <!-- Right Body Content -->
+            <article class="guide-body-content">
+                <div class="legal-header" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem;">
+                    <span class="legal-badge">Exporter Guide</span>
+                    <h1 style="font-size: 3rem;">Exporting Contacts & Group Members</h1>
+                    <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 0.5rem;">A complete guide to filtering leads, choosing columns, extracting WhatsApp group members, and downloading datasets safely to your computer.</p>
+                </div>
+
+                <div class="legal-content" style="gap: 1.5rem;">
+                    
+                    <section id="segments" class="legal-section">
+                        <h2>1. Filtering Contact Segments</h2>
+                        <p>Conflo allows you to target specific types of contacts so you don't end up with massive, unorganized databases.</p>
+                        
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">1</div>
+                            <div class="guide-step-details">
+                                <h4>Open Export Panel</h4>
+                                <p>Click on the <strong>Export</strong> tab inside the Conflo sidebar or open the floating exporter window from the top extension control header.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">2</div>
+                            <div class="guide-step-details">
+                                <h4>Choose Segment Filter</h4>
+                                <p>Select your data subset. You can filter by: <strong>Unsaved Chats</strong> (cold outreach leads), <strong>All Chat Sessions</strong>, <strong>WhatsApp Groups</strong>, or official custom labels.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="columns" class="legal-section">
+                        <h2>2. Configuring Exported Columns</h2>
+                        <p>Customize the data structure of your final spreadsheet. Toggle attributes on or off prior to packaging.</p>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">3</div>
+                            <div class="guide-step-details">
+                                <h4>Toggle Attributes</h4>
+                                <p>Select which headers to output: Phone Number, WA Display Name, Country Code, ISO2 Code, Group joined date, and custom CRM fields (Email, Value, Stage, and Notes).</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="formats" class="legal-section">
+                        <h2>3. File Format Selection</h2>
+                        <p>Conflo compiles datasets locally using browser-based scripts. Download files in four popular extensions:</p>
+                        
+                        <div class="legal-card" style="margin: 1rem 0; padding: 1.25rem;">
+                            <ul style="padding-left: 1rem; margin: 0;">
+                                <li><strong>Excel (.xlsx):</strong> Best for general business storage and marketing reviews.</li>
+                                <li><strong>CSV (.csv):</strong> Preferred for importing directly into third-party CRM tools, Google Sheets, or email campaigns.</li>
+                                <li><strong>JSON (.json):</strong> Structured nested format for developers or custom scripting.</li>
+                                <li><strong>vCard (.vcf):</strong> Used to bulk-import contacts directly into your mobile phone (iPhone or Android).</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="groups" class="legal-section">
+                        <h2>4. Exporting WhatsApp Group Members</h2>
+                        <p>Perfect for community managers. Extract the full roster of group participants instantly.</p>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">4</div>
+                            <div class="guide-step-details">
+                                <h4>Select the Target Group</h4>
+                                <p>Navigate to the specific WhatsApp Group in your chat list. Conflo's sidebar will automatically adapt to the group metadata.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">5</div>
+                            <div class="guide-step-details">
+                                <h4>Trigger Bulk Extraction</h4>
+                                <p>Click <strong>Export Group Members</strong>. Conflo will parse the participant list from the DOM securely and download the spreadsheet file instantly.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Next Guide Navigation -->
+                    <div style="margin-top: 3.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--card-border); padding-top: 2rem;">
+                        <a href="../setup/" class="btn btn-secondary btn-small">← Back to Setup Guide</a>
+                        <a href="../templates/" class="btn btn-primary btn-small">Next Guide: Quick Templates →</a>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-copyright">
+                &copy; 2026 Conflo. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="../../guides/" id="footer-link-guides">Guides</a>
+                <a href="../../terms/" id="footer-link-terms">Terms of Service</a>
+                <a href="../../privacy/" id="footer-link-privacy">Privacy Policy</a>
+                <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Active TOC highlighting script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('.guide-toc-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

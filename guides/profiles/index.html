@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to configure custom fields, deal stages, and lead notes in Conflo CRM.">
+    <meta name="author" content="Conflo App">
+    <title>Custom Contact Fields & Lead Profiles - Conflo CRM Guide</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../../style.css">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHZLX9DKB5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WHZLX9DKB5');
+    </script>
+</head>
+<body>
+
+    <!-- Ambient Light Glow Elements -->
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-left"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="container nav-wrapper">
+            <a href="../../index.html" class="logo-wrapper">
+                <div class="logo-icon">C</div>
+                <span class="logo-text">Conflo</span>
+            </a>
+            <nav class="site-nav">
+                <a href="../../index.html#features" class="nav-link" id="nav-features-link">Features</a>
+                <a href="../../index.html#export-showcase" class="nav-link" id="nav-export-link">Exports</a>
+                <a href="../../index.html#pricing" class="nav-link" id="nav-pricing-link">Pricing</a>
+                <a href="../../guides/" class="nav-link active" id="nav-guides-link" style="color: var(--brand-primary); font-weight: 700;">Guides</a>
+                <a href="../../index.html#faq" class="nav-link" id="nav-faq-link">FAQ</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://store.conflo.app" class="btn btn-secondary btn-small" id="nav-cta-premium">
+                    Purchase Now
+                </a>
+                <a href="https://chrome.google.com/webstore" class="btn btn-primary btn-small" id="nav-cta-install">
+                    Install Free
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="padding-top: 3.5rem; padding-bottom: 7rem;">
+        
+        <!-- Breadcrumbs -->
+        <nav class="guide-nav-breadcrumb">
+            <a href="../../guides/">All Guides</a>
+            <span>/</span>
+            <span style="color: var(--text-main); font-weight: 600;">Custom Contact Fields</span>
+        </nav>
+
+        <div class="guide-layout">
+            
+            <!-- Left Sidebar (TOC) -->
+            <aside class="guide-sidebar">
+                <div class="guide-toc-card">
+                    <h3 class="guide-toc-title">On This Page</h3>
+                    <ul class="guide-toc-list">
+                        <li><a href="#profile" class="guide-toc-link active" id="toc-link-profile">1. CRM Profile Cards</a></li>
+                        <li><a href="#schema" class="guide-toc-link" id="toc-link-schema">2. Lead Stages & Values</a></li>
+                        <li><a href="#storage" class="guide-toc-link" id="toc-link-storage">3. Local Backups & Cache</a></li>
+                    </ul>
+                </div>
+                
+                <div class="legal-card highlight" style="margin: 0; padding: 1.5rem;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">Security Alert</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">All custom profile values are stored in your local browser sandbox. Nobody else can see or access them.</p>
+                </div>
+            </aside>
+
+            <!-- Right Body Content -->
+            <article class="guide-body-content">
+                <div class="legal-header" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem;">
+                    <span class="legal-badge">CRM Profiles Guide</span>
+                    <h1 style="font-size: 3rem;">Custom Contact Fields</h1>
+                    <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 0.5rem;">Learn how to organize WhatsApp conversations using custom client profiles, track deal sizes, assign stages, and keep notes.</p>
+                </div>
+
+                <div class="legal-content" style="gap: 1.5rem;">
+                    
+                    <section id="profile" class="legal-section">
+                        <h2>1. Inside the CRM Profile Cards</h2>
+                        <p>When you select a conversation on WhatsApp Web, Conflo's sidebar displays a custom profile card dedicated to that specific contact.</p>
+                        
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">1</div>
+                            <div class="guide-step-details">
+                                <h4>Open Profile Tab</h4>
+                                <p>Click the <strong>Profile</strong> tab inside the injected Conflo CRM sidebar interface.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">2</div>
+                            <div class="guide-step-details">
+                                <h4>View Active Contact</h4>
+                                <p>Select any contact chat. The sidebar immediately loads the active contact's local profile fields, allowing you to view notes or update fields on the fly.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="schema" class="legal-section">
+                        <h2>2. Managing Lead Stages & Deal Values</h2>
+                        <p>Track your pipeline phases and potential revenue directly inside the WhatsApp window.</p>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">3</div>
+                            <div class="guide-step-details">
+                                <h4>Assign Lead Stage</h4>
+                                <p>Choose a pipeline category: <strong>New Lead</strong>, <strong>Negotiation</strong>, <strong>Won</strong>, or <strong>Lost</strong>. Filters can then segment your contacts by stage in the Home panel.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">4</div>
+                            <div class="guide-step-details">
+                                <h4>Input Email & Value</h4>
+                                <p>Enter the client's business email and deal size (value). These columns are automatically indexed and will export to spreadsheets dynamically.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="storage" class="legal-section">
+                        <h2>3. Local Storage Cache & Backups</h2>
+                        <p>Because Conflo operates locally for maximum privacy, it stores all database attributes in the browser's local sandbox memory.</p>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">5</div>
+                            <div class="guide-step-details">
+                                <h4>Data Auto-Saving</h4>
+                                <p>There is no manual "Save" button for notes or values. The extension automatically records keystrokes to your local cache in real-time, preventing lost client notes.</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-step-card">
+                            <div class="guide-step-number">6</div>
+                            <div class="guide-step-details">
+                                <h4>Inspect Cache & Clear</h4>
+                                <p>To review your local storage limit or clear cached data entirely, navigate to the Settings tab inside the sidebar. Click <strong>Clear Cache</strong> to permanently delete all profile notes from the browser memory.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Next Guide Navigation -->
+                    <div style="margin-top: 3.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--card-border); padding-top: 2rem;">
+                        <a href="../templates/" class="btn btn-secondary btn-small">← Back to Templates Guide</a>
+                        <a href="../../guides/" class="btn btn-primary btn-small">All Guides Home →</a>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-wrapper">
+            <div class="footer-copyright">
+                &copy; 2026 Conflo. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="../../guides/" id="footer-link-guides">Guides</a>
+                <a href="../../terms/" id="footer-link-terms">Terms of Service</a>
+                <a href="../../privacy/" id="footer-link-privacy">Privacy Policy</a>
+                <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple Active TOC highlighting script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('.guide-toc-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

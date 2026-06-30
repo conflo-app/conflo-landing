@@ -15,6 +15,16 @@
     
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHZLX9DKB5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-WHZLX9DKB5');
+    </script>
 </head>
 <body>
 
@@ -25,14 +35,15 @@
     <!-- Header Navigation -->
     <header class="site-header">
         <div class="container nav-wrapper">
-            <div class="logo-wrapper">
+            <a href="index.html" class="logo-wrapper">
                 <div class="logo-icon">C</div>
                 <span class="logo-text">Conflo</span>
-            </div>
+            </a>
             <nav class="site-nav">
                 <a href="#features" class="nav-link" id="nav-features-link">Features</a>
                 <a href="#export-showcase" class="nav-link" id="nav-export-link">Exports</a>
                 <a href="#pricing" class="nav-link" id="nav-pricing-link">Pricing</a>
+                <a href="guides/" class="nav-link" id="nav-guides-link">Guides</a>
                 <a href="#faq" class="nav-link" id="nav-faq-link">FAQ</a>
             </nav>
             <div class="nav-actions">
@@ -420,8 +431,9 @@
                 &copy; 2026 Conflo. All rights reserved.
             </div>
             <div class="footer-links">
-                <a href="#" id="footer-link-terms">Terms of Service</a>
-                <a href="#" id="footer-link-privacy">Privacy Policy</a>
+                <a href="guides/" id="footer-link-guides">Guides</a>
+                <a href="terms/" id="footer-link-terms">Terms of Service</a>
+                <a href="privacy/" id="footer-link-privacy">Privacy Policy</a>
                 <a href="mailto:support@conflo.app" id="footer-link-support">Contact Support</a>
             </div>
         </div>
