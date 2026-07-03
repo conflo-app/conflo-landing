@@ -53,13 +53,16 @@ Once your chats finish syncing, look at the right side of the screen. You will s
 
 ## 3. Activating Premium Licensing {: #license }
 
-To register your copy and enable unrestricted exports or custom fields schema profile metadata, log in using your premium key.
+To register your copy and enable unrestricted exports or custom fields schema profile metadata, activate your premium license key.
 
 ### Step 5: Retrieve License Key
 Locate the license receipt email sent to you after making a purchase on our store page. Copy the alphanumeric key code.
 
-### Step 6: Paste in Sidebar Settings
-Inside the Conflo CRM panel, click on the Settings/License tab. Paste your license key into the registration field and click **Activate**. Your license instantly binds to your device locally.
+### Step 6: Open the Extension Sidebar
+Click on the extension icon in the Chrome browser toolbar (located in the top-right Chrome panel). This will open the Conflo CRM sidebar.
+
+### Step 7: Access Options Page & Activate
+At the top of the extension, click the **key icon** to go to the extension options page. Paste your license key into the activation field and register your device.
 
 ---
 
