@@ -1,175 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conflo CRM turns WhatsApp Web into a high-performance workspace. Organize chats, manage custom contact profiles, use quick reply templates, and export chats to Excel. Launching soon!">
-    <meta name="keywords" content="whatsapp crm, whatsapp export, quick replies, whatsapp web, leads manager, chrome extension, coming soon">
-    <meta name="author" content="Conflo App">
-    
-    <!-- Title Element -->
-    <title>Conflo CRM - WhatsApp Productivity Suite - Coming Soon</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://conflo.app/favicon.png" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2300a884%22/><text y=%22.9em%22 font-size=%2290%22 fill=%22white%22>C</text></svg>'">
-    
-    <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Dynamic Particle Canvas Background -->
-    <canvas id="particle-canvas"></canvas>
-
-    <!-- Background Ambient Glows -->
-    <div class="ambient-glow glow-1"></div>
-    <div class="ambient-glow glow-2"></div>
-
-    <div class="page-wrapper">
-        <!-- Header -->
-        <header class="site-header">
-            <div class="logo-wrapper">
-                <div class="logo-icon">C</div>
-                <span class="logo-text">Conflo</span>
-            </div>
-        </header>
-
-        <!-- Main Section -->
-        <main class="main-content">
-            <!-- Hero Header -->
-            <div class="hero-header">
-                <div class="launch-badge">
-                    <span class="pulse-dot"></span>
-                    <span>Launching Soon</span>
-                </div>
-                <h1 class="hero-title">The Ultimate CRM Suite for WhatsApp Web</h1>
-                <p class="hero-subtitle">
-                    Segment chats, create custom profiles, automate templates, and export contact sheets. Turn WhatsApp Web into your highest-converting workspace.
-                </p>
-            </div>
-
-            <!-- Feature Sneak Peek Tabs -->
-            <div class="sneak-peek-section">
-                <h2 class="sneak-peek-title">Sneak Peek of Key Features</h2>
-                <div class="tab-selectors">
-                    <button class="tab-btn active" data-tab="tab-chat-segments" id="btn-tab-segments">
-                        <span class="tab-icon">📁</span> Chat Segments
-                    </button>
-                    <button class="tab-btn" data-tab="tab-custom-profiles" id="btn-tab-profiles">
-                        <span class="tab-icon">🏷️</span> Custom Profiles
-                    </button>
-                    <button class="tab-btn" data-tab="tab-replies" id="btn-tab-replies">
-                        <span class="tab-icon">⚡</span> Quick Replies
-                    </button>
-                    <button class="tab-btn" data-tab="tab-exports" id="btn-tab-exports">
-                        <span class="tab-icon">📤</span> Excel Export
-                    </button>
+---
+layout: default
+title: "Conflo CRM - WhatsApp Leads and Productivity Suite"
+description: "Conflo CRM turns WhatsApp Web into a high-performance workspace. Organize chats, manage custom contact profiles, use quick reply templates, and export chats to Excel."
+keywords: "whatsapp crm, whatsapp export, quick replies, whatsapp web, leads manager, chrome extension"
+show_app_js: true
+---
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">WhatsApp Web CRM</div>
+                    <h1 class="hero-title">Turn WhatsApp into a High-Performance CRM</h1>
+                    <p class="hero-description">
+                        Conflo CRM segments your contacts, stores custom profiles, speeds up outreach with templates, and exports groups to Excel—directly inside WhatsApp Web.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://chromewebstore.google.com/detail/koeldenjlegimccodkpgfkfmdbffopba" class="btn btn-primary" id="hero-cta-primary">
+                            <svg width="16" height="16" viewBox="-0.82 0 437.46 437.46" xmlns="http://www.w3.org/2000/svg"><path d="M217.341.039s128.478-5.783 196.57 123.337H206.416s-39.188-1.289-72.593 46.255c-9.634 19.916-19.91 40.473-8.349 80.937C108.773 222.309 36.823 97.04 36.823 97.04S87.578 5.176 217.341.039z" fill="#c6352e"/><path d="M407.223 327.871s-59.247 114.143-205.118 108.533c17.995-31.148 103.772-179.682 103.772-179.682s20.709-33.289-3.744-85.991c-12.431-18.305-25.09-37.486-65.919-47.713 32.836-.326 177.285.021 177.285.021s54.168 89.891-6.276 204.832z" fill="#f4d911"/><path d="M28.373 328.738s-69.224-108.395 8.58-231.908c17.979 31.16 103.71 179.72 103.71 179.72s18.469 34.578 76.341 39.756c22.061-1.609 45.007-2.982 74.279-33.223-16.139 28.594-88.673 153.521-88.673 153.521S97.681 438.56 28.373 328.738z" fill="#81b354"/><path d="M202.105 437.46l29.187-121.793s32.092-2.504 58.982-32.017c-16.693 29.365-88.169 153.81-88.169 153.81z" fill="#7baa50"/><path d="M119.59 220.093c0-53.69 43.52-97.215 97.215-97.215 53.69 0 97.214 43.524 97.214 97.215 0 53.693-43.522 97.219-97.214 97.219-53.695 0-97.215-43.525-97.215-97.219z" fill="#ffffff"/><linearGradient id="chrome-logo-grad-hero" gradientUnits="userSpaceOnUse" x1="-829.128" y1="1417.339" x2="-829.128" y2="1261.441" gradientTransform="matrix(1 0 0 -1 1045.93 1557.636)"><stop offset="0" stop-color="#a2c0e6"/><stop offset="1" stop-color="#406cb1"/></linearGradient><path d="M135.86 220.093c0-44.702 36.238-80.941 80.945-80.941 44.698 0 80.94 36.239 80.94 80.941 0 44.703-36.242 80.945-80.94 80.945-44.707.001-80.945-36.244-80.945-80.945z" fill="url(#chrome-logo-grad-hero)"/><path d="M413.5 123.039l-120.183 35.237s-18.123-26.596-57.104-35.258c33.776-.115 177.287.021 177.287.021z" fill="#e7ce12"/><path d="M123.137 246.197c-16.89-29.25-86.31-149.16-86.31-149.16l89.029 88.07s-9.149 18.82-5.68 45.7l2.961 15.39z" fill="#bc332c"/></svg>
+                            Add to Chrome
+                        </a>
+                        <a href="https://store.conflo.app" class="btn btn-secondary" id="hero-cta-premium">
+                            Purchase Now
+                        </a>
+                    </div>
+                    <div class="chrome-web-store-info">
+                        <!-- <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg> -->
+                        <span>Install directly via Google Chrome Web Store.</span>
+                    </div>
                 </div>
 
-                <div class="tab-contents">
-                    <!-- Tab 1 -->
-                    <div class="tab-pane active" id="tab-chat-segments">
-                        <div class="tab-grid">
-                            <div class="tab-text">
-                                <h3>Organize chats, eliminate noise.</h3>
-                                <p>Segment chats instantly into custom categories like Leads, Groups, Unsaved, and Active. Never lose track of high-value client conversations again.</p>
-                            </div>
-                            <div class="tab-visual">
-                                <div class="mock-ui">
-                                    <div class="mock-ui-header">Tabs Manager</div>
-                                    <div class="mock-tag-list">
-                                        <span class="mock-tag active">All Chats</span>
-                                        <span class="mock-tag">Saved (12)</span>
-                                        <span class="mock-tag">Groups (8)</span>
-                                        <span class="mock-tag">Unread (5)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 2 -->
-                    <div class="tab-pane" id="tab-custom-profiles">
-                        <div class="tab-grid">
-                            <div class="tab-text">
-                                <h3>Full client records right inside chats.</h3>
-                                <p>Add notes, set custom attributes, input deal values, and store email addresses for each contact directly inside WhatsApp Web. Your mini CRM follows you everywhere.</p>
-                            </div>
-                            <div class="tab-visual">
-                                <div class="mock-ui">
-                                    <div class="mock-ui-header">Customer Profile</div>
-                                    <div class="mock-profile-field">
-                                        <span class="mock-field-label">Lead Status</span>
-                                        <span class="mock-field-badge status-warning">In Negotiation</span>
-                                    </div>
-                                    <div class="mock-profile-field">
-                                        <span class="mock-field-label">Email</span>
-                                        <span class="mock-field-val">alex@acme.com</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 3 -->
-                    <div class="tab-pane" id="tab-replies">
-                        <div class="tab-grid">
-                            <div class="tab-text">
-                                <h3>Outreach at the speed of light.</h3>
-                                <p>Create reusable templates with custom placeholders and rich media attachments. Send them in two clicks to answer common questions in seconds.</p>
-                            </div>
-                            <div class="tab-visual">
-                                <div class="mock-ui">
-                                    <div class="mock-ui-header">Quick Templates</div>
-                                    <div class="mock-template-item">
-                                        <strong>/pricing_info</strong>
-                                        <span>Hey {name}, our plans start at...</span>
-                                    </div>
-                                    <div class="mock-template-item">
-                                        <strong>/demo_link</strong>
-                                        <span>Sure! Here is the calendar link...</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tab 4 -->
-                    <div class="tab-pane" id="tab-exports">
-                        <div class="tab-grid">
-                            <div class="tab-text">
-                                <h3>Download your audience lists in one click.</h3>
-                                <p>Export chats, group participants, broadcast members, or filtered leads list into clean Excel (`.xlsx`), CSV, JSON, or vCard (`.vcf`) files instantly.</p>
-                            </div>
-                            <div class="tab-visual">
-                                <div class="mock-ui">
-                                    <div class="mock-ui-header">Data Exporter</div>
-                                    <div class="mock-export-card">
-                                        <div class="mock-export-format">Format: <span>Excel (.xlsx)</span></div>
-                                        <button class="mock-btn-action" disabled>Download 145 Contacts</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Hero Screenshot (3D Rotated and Cropped to Conflo Sidebar) -->
+                <div class="hero-visual">
+                    <div class="hero-image-card">
+                        <img src="{{ '/conflo-contactpage-whatsapp-privacy.png' | relative_url }}" alt="Conflo CRM Contact Sidebar Interface" class="hero-image-crop">
                     </div>
                 </div>
             </div>
+        </section>
 
-            <p class="more-features-minimal">...and many more features coming soon!</p>
-        </main>
+        <!-- Features Grid Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Core Capabilities</span>
+                    <h2 class="section-title">Everything you need to sell & support on WhatsApp</h2>
+                    <p class="section-description">
+                        Conflo integrates directly into your WhatsApp Web interface, adding features that feel native and lightning fast.
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">📂</div>
+                        <h3>Chat Segments</h3>
+                        <p>Segment chats into Saved, Unsaved, Group, and Enterprise tabs. Filter down instantly and view core customer distributions at a glance.</p>
+                    </div>
 
-        <!-- Footer -->
-        <footer class="site-footer">
-            <p class="copyright">&copy; 2026 Conflo. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="mailto:support@conflo.app" id="link-support">Contact Support</a>
-                <span class="bullet">•</span>
-                <a href="https://conflo.app" id="link-home">Home</a>
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">🏷️</div>
+                        <h3>Custom Contact Fields</h3>
+                        <p>Track business leads effectively. Add note inputs, customer tags, and custom key-value profile sheets (Deal stage, Value, Emails) to any chat.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">⚡</div>
+                        <h3>Quick Template Replies</h3>
+                        <p>Speed up conversation flows. Select template cards, preview contents, attach media files, and send in 2 clicks. Prevents accidental sends.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">📤</div>
+                        <h3>Advanced Contact Exporters</h3>
+                        <p>Extract leads in one click. Filter by groups or labels, and export contacts to Excel (.xlsx), CSV, JSON, or vCard (.vcf) layouts.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">🔒</div>
+                        <h3>Privacy Toggles</h3>
+                        <p>Blur names and conversation snapshots dynamically in one click. Ensures customer confidentiality when working in public places.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card">
+                        <div class="feature-icon-box">🚀</div>
+                        <h3>High-Performance Engine</h3>
+                        <p>Injected natively into the WhatsApp Web DOM. Zero lag, lightning-fast rendering, and operates securely behind WhatsApp modules.</p>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </div>
+        </section>
 
-    <!-- JS Logic -->
-    <script src="app.js"></script>
-</body>
-</html>
+        <!-- Real Screenshot & Export Feature Showcase Section -->
+        <section class="export-showcase" id="export-showcase">
+            <div class="container export-showcase-grid">
+                <div class="export-showcase-content">
+                    <span class="section-tag">Powerful Data Exporter</span>
+                    <h2 class="export-showcase-title">Export Contact Lists and Group Members Instantly</h2>
+                    <p class="export-showcase-description">
+                        Conflo features a robust floating dashboard layout designed for macro tasks. Download active lists directly from chats, groups, labels, or broadcasts.
+                    </p>
+                    <ul class="export-bullets-list">
+                        <li>
+                            <strong>Flexible Columns:</strong> Choose which attributes to include: Serialized IDs, WANames, Phone numbers, Country, ISO2 Codes, and custom CRM values.
+                        </li>
+                        <li>
+                            <strong>Multiple Formats:</strong> Compile data natively into Excel (`.xlsx`), standard CSV files, structured JSON datasets, or vCard formats.
+                        </li>
+                        <li>
+                            <strong>Lead Filtering:</strong> Strip system groups, exclude WhatsApp Business features, and filter countries dynamically prior to packaging.
+                        </li>
+                    </ul>
+                </div>
+                <div class="export-showcase-visual">
+                    <div class="screenshot-container shadow-premium animate-hover">
+                        <img src="{{ '/export_page_conflo.png' | relative_url }}" alt="Conflo CRM Premium Exporter Dashboard Interface" class="product-screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Flexible Pricing Plans</span>
+                    <h2 class="section-title">Simple, Transparent Pricing</h2>
+                    <p class="section-description">
+                        Unlock unlimited contact exports, custom field schema profile cards, templates, and priority developer support.
+                    </p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Quarterly Plan -->
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <span class="plan-name">Quarterly Plan</span>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">
+                                Perfect for short-term outreach tasks.
+                            </p>
+                            <div class="plan-price-wrapper">
+                                <span class="plan-price">$15</span>
+                                <span class="plan-period">/ quarter</span>
+                            </div>
+                            <span class="plan-equivalent">Equivalent to $5.00 / month</span>
+                        </div>
+
+                         <ul class="pricing-features-list">
+                            <li>Unlimited contacts & groups exports</li>
+                            <li>Full custom contact fields schema</li>
+                            <li>Custom notes & profile metadata cards</li>
+                            <li>More features coming soon!</li>
+                        </ul>
+
+                        <a href="https://store.conflo.app" class="btn btn-secondary text-center" style="width: 100%; border-radius: 0.5rem; justify-content: center;" id="pricing-cta-quarterly">
+                            Purchase Now
+                        </a>
+                    </div>
+
+                    <!-- Yearly Plan -->
+                    <div class="pricing-card popular">
+                        <div class="pricing-badge">Save 17%</div>
+                        <div class="pricing-card-header">
+                            <span class="plan-name">Yearly Plan</span>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-top: 0.25rem;">
+                                Best value for active marketing pipelines.
+                            </p>
+                            <div class="plan-price-wrapper">
+                                <span class="plan-price">$50</span>
+                                <span class="plan-period">/ year</span>
+                            </div>
+                            <span class="plan-equivalent">Equivalent to $4.17 / month</span>
+                        </div>
+
+                        <ul class="pricing-features-list">
+                            <li>Unlimited contacts & groups exports</li>
+                            <li>Full custom contact fields schema</li>
+                            <li>Custom notes & profile metadata cards</li>
+                            <li>More features coming soon!</li>
+                        </ul>
+
+                        <a href="https://store.conflo.app" class="btn btn-primary text-center" style="width: 100%; border-radius: 0.5rem; justify-content: center;" id="pricing-cta-yearly">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Answering Questions</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q-1">
+                            <span>How does Conflo CRM connect to WhatsApp?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Conflo runs as a Chrome Extension that injects a secure sidebar directly into the WhatsApp Web page. It interacts natively with the browser's DOM elements without modifying WhatsApp's core code.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q-2">
+                            <span>Is my data secure?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. Conflo values your privacy. All contact cards, custom properties, and templates are stored locally on your device using IndexedDB and chrome.storage.local. No customer chats or phone data are sent to external servers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-q-3">
+                            <span>What limits apply to the free trial?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>The free trial allows you to use all interface features. For exports, the trial masks or limits the contact count to 6 rows. Upgrading to a premium license instantly removes all export boundaries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to Supercharge WhatsApp?</h2>
+                    <p>Install the Conflo extension and start organizing your business chats in under 60 seconds.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; width: 100%;">
+                        <a href="https://chromewebstore.google.com/detail/koeldenjlegimccodkpgfkfmdbffopba" class="btn btn-primary" id="footer-cta-install">
+                            <svg width="16" height="16" viewBox="-0.82 0 437.46 437.46" xmlns="http://www.w3.org/2000/svg"><path d="M217.341.039s128.478-5.783 196.57 123.337H206.416s-39.188-1.289-72.593 46.255c-9.634 19.916-19.91 40.473-8.349 80.937C108.773 222.309 36.823 97.04 36.823 97.04S87.578 5.176 217.341.039z" fill="#c6352e"/><path d="M407.223 327.871s-59.247 114.143-205.118 108.533c17.995-31.148 103.772-179.682 103.772-179.682s20.709-33.289-3.744-85.991c-12.431-18.305-25.09-37.486-65.919-47.713 32.836-.326 177.285.021 177.285.021s54.168 89.891-6.276 204.832z" fill="#f4d911"/><path d="M28.373 328.738s-69.224-108.395 8.58-231.908c17.979 31.16 103.71 179.72 103.71 179.72s18.469 34.578 76.341 39.756c22.061-1.609 45.007-2.982 74.279-33.223-16.139 28.594-88.673 153.521-88.673 153.521S97.681 438.56 28.373 328.738z" fill="#81b354"/><path d="M202.105 437.46l29.187-121.793s32.092-2.504 58.982-32.017c-16.693 29.365-88.169 153.81-88.169 153.81z" fill="#7baa50"/><path d="M119.59 220.093c0-53.69 43.52-97.215 97.215-97.215 53.69 0 97.214 43.524 97.214 97.215 0 53.693-43.522 97.219-97.214 97.219-53.695 0-97.215-43.525-97.215-97.219z" fill="#ffffff"/><linearGradient id="chrome-logo-grad-footer" gradientUnits="userSpaceOnUse" x1="-829.128" y1="1417.339" x2="-829.128" y2="1261.441" gradientTransform="matrix(1 0 0 -1 1045.93 1557.636)"><stop offset="0" stop-color="#a2c0e6"/><stop offset="1" stop-color="#406cb1"/></linearGradient><path d="M135.86 220.093c0-44.702 36.238-80.941 80.945-80.941 44.698 0 80.94 36.239 80.94 80.941 0 44.703-36.242 80.945-80.94 80.945-44.707.001-80.945-36.244-80.945-80.945z" fill="url(#chrome-logo-grad-footer)"/><path d="M413.5 123.039l-120.183 35.237s-18.123-26.596-57.104-35.258c33.776-.115 177.287.021 177.287.021z" fill="#e7ce12"/><path d="M123.137 246.197c-16.89-29.25-86.31-149.16-86.31-149.16l89.029 88.07s-9.149 18.82-5.68 45.7l2.961 15.39z" fill="#bc332c"/></svg>
+                            Add to Chrome
+                        </a>
+                        <a href="https://store.conflo.app" class="btn btn-secondary" id="footer-cta-premium">
+                            Purchase Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>

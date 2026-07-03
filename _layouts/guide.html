@@ -1,0 +1,116 @@
+---
+layout: default
+---
+<main class="container" style="padding-top: 3.5rem; padding-bottom: 7rem;">
+    
+    <!-- Breadcrumbs -->
+    <nav class="guide-nav-breadcrumb">
+        <a href="{{ '/guides/' | relative_url }}">All Guides</a>
+        <span>/</span>
+        <span style="color: var(--text-main); font-weight: 600;">{{ page.breadcrumb_title | default: page.title }}</span>
+    </nav>
+
+    <div class="guide-layout">
+        
+        <!-- Left Sidebar (TOC) -->
+        <aside class="guide-sidebar">
+            {% if page.toc %}
+            <div class="guide-toc-card">
+                <h3 class="guide-toc-title">On This Page</h3>
+                <ul class="guide-toc-list">
+                    {% for item in page.toc %}
+                    <li><a href="#{{ item.id }}" class="guide-toc-link {% if forloop.first %}active{% endif %}" id="toc-link-{{ item.id }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            
+            {% if page.sidebar_helper %}
+            <div class="legal-card highlight" style="margin: 0; padding: 1.5rem;">
+                <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text-main);">{{ page.sidebar_helper.title }}</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">{{ page.sidebar_helper.text }}</p>
+            </div>
+            {% endif %}
+        </aside>
+
+        <!-- Right Body Content -->
+        <article class="guide-body-content">
+            <div class="legal-header" style="margin-bottom: 2.5rem; padding-bottom: 1.5rem;">
+                {% if page.badge %}
+                <span class="legal-badge">{{ page.badge }}</span>
+                {% endif %}
+                <h1 style="font-size: 3rem;">{{ page.title }}</h1>
+                {% if page.subtitle %}
+                <p style="color: var(--text-muted); font-size: 1.15rem; margin-top: 0.5rem;">{{ page.subtitle }}</p>
+                {% endif %}
+            </div>
+
+            <div class="legal-content" style="gap: 1.5rem;">
+                
+                {{ content }}
+
+                <!-- Next Guide Navigation -->
+                {% assign sorted_guides = site.guides | sort: 'order' %}
+                {% assign prev_guide = nil %}
+                {% assign next_guide = nil %}
+                
+                {% for g in sorted_guides %}
+                  {% if g.url == page.url %}
+                    {% assign current_index = forloop.index0 %}
+                    {% assign prev_index = current_index | minus: 1 %}
+                    {% assign next_index = current_index | plus: 1 %}
+                    
+                    {% if prev_index >= 0 %}
+                      {% assign prev_guide = sorted_guides[prev_index] %}
+                    {% endif %}
+                    {% if next_index < sorted_guides.size %}
+                      {% assign next_guide = sorted_guides[next_index] %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                
+                <div style="margin-top: 3.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--card-border); padding-top: 2rem;">
+                    {% if prev_guide %}
+                    <a href="{{ prev_guide.url | relative_url }}" class="btn btn-secondary btn-small">← Back to {{ prev_guide.nav_title | default: prev_guide.title }}</a>
+                    {% else %}
+                    <a href="{{ '/guides/' | relative_url }}" class="btn btn-secondary btn-small">← Back to All Guides</a>
+                    {% endif %}
+                    
+                    {% if next_guide %}
+                    <a href="{{ next_guide.url | relative_url }}" class="btn btn-primary btn-small">Next Guide: {{ next_guide.nav_title | default: next_guide.title }} →</a>
+                    {% else %}
+                    <a href="{{ '/guides/' | relative_url }}" class="btn btn-primary btn-small">All Guides Home →</a>
+                    {% endif %}
+                </div>
+
+            </div>
+        </article>
+
+    </div>
+</main>
+
+<!-- Simple Active TOC highlighting script -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.guide-toc-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    });
+</script>

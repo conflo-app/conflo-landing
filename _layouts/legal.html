@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<main class="container">
+    <div class="legal-container">
+        <div class="legal-header">
+            {% if page.badge %}
+            <span class="legal-badge">{{ page.badge }}</span>
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+            <div class="legal-meta">
+                <span>Last Updated: <strong>{{ page.last_updated }}</strong></span>
+            </div>
+        </div>
+
+        <div class="legal-content">
+            {{ content }}
+        </div>
+    </div>
+</main>

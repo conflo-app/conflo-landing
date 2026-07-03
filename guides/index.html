@@ -1,0 +1,71 @@
+---
+layout: default
+title: "Knowledge Base & Guides - Conflo CRM"
+description: "Conflo CRM Knowledge Base. Explore step-by-step guides on setting up, exporting, and managing WhatsApp leads."
+---
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Guides Hero -->
+        <section class="guides-hero">
+            <span class="legal-badge" style="margin-bottom: 0.5rem;">Documentation</span>
+            <h1>Knowledge Base & Guides</h1>
+            <p>Step-by-step instructions, feature walkthroughs, and helpful tips to supercharge your WhatsApp outreach with Conflo CRM.</p>
+            
+            <div class="search-wrapper">
+                <span class="search-icon-box">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </span>
+                <input type="text" class="search-input" id="guides-search-input" placeholder="Search guides, setups, or exporter terms...">
+            </div>
+        </section>
+
+        <!-- Guides List Section -->
+        <section class="guides-section">
+            <div class="guides-list-container" id="guides-card-grid">
+                
+                {% assign sorted_guides = site.guides | sort: 'order' %}
+                {% for guide in sorted_guides %}
+                <a href="{{ guide.url | relative_url }}" class="guide-list-item" data-keywords="{{ guide.keywords }}" id="guide-link-{{ guide.url | split: '/' | last }}">
+                    <span class="guide-list-emoji">{{ guide.icon | default: '📄' }}</span>
+                    <div class="guide-list-text">
+                        <h3>{{ guide.breadcrumb_title | default: guide.title }}</h3>
+                        <p class="guide-list-byline">{{ guide.description }}</p>
+                    </div>
+                    <span class="guide-list-arrow">→</span>
+                </a>
+                {% endfor %}
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Simple client-side search logic to make the guide directory interactive -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('guides-search-input');
+            const cards = document.querySelectorAll('.guide-list-item');
+            
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    
+                    cards.forEach(card => {
+                        const keywords = card.getAttribute('data-keywords') || '';
+                        const title = card.querySelector('h3').textContent.toLowerCase();
+                        const desc = card.querySelector('p').textContent.toLowerCase();
+                        
+                        if (title.includes(query) || desc.includes(query) || keywords.includes(query)) {
+                            card.style.display = 'flex';
+                            card.style.opacity = '1';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
