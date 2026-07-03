@@ -22,27 +22,20 @@ description: "Conflo CRM Knowledge Base. Explore step-by-step guides on setting 
             </div>
         </section>
 
-        <!-- Guides Grid Section -->
+        <!-- Guides List Section -->
         <section class="guides-section">
-            <div class="guides-grid" id="guides-card-grid">
+            <div class="guides-list-container" id="guides-card-grid">
                 
                 {% assign sorted_guides = site.guides | sort: 'order' %}
                 {% for guide in sorted_guides %}
-                <article class="guide-card" data-keywords="{{ guide.keywords }}">
-                    <div class="guide-card-icon-box">{{ guide.icon | default: '📄' }}</div>
-                    <div class="guide-card-content">
+                <a href="{{ guide.url | relative_url }}" class="guide-list-item" data-keywords="{{ guide.keywords }}" id="guide-link-{{ guide.url | split: '/' | last }}">
+                    <span class="guide-list-emoji">{{ guide.icon | default: '📄' }}</span>
+                    <div class="guide-list-text">
                         <h3>{{ guide.breadcrumb_title | default: guide.title }}</h3>
-                        <p>{{ guide.description }}</p>
+                        <p class="guide-list-byline">{{ guide.description }}</p>
                     </div>
-                    {% if guide.topics %}
-                    <ul class="guide-card-topics">
-                        {% for topic in guide.topics %}
-                        <li>{{ topic }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                    <a href="{{ guide.url | relative_url }}" class="btn btn-secondary guide-card-btn" id="guide-link-{{ guide.url | split: '/' | last }}">Read Guide →</a>
-                </article>
+                    <span class="guide-list-arrow">→</span>
+                </a>
                 {% endfor %}
 
             </div>
@@ -54,7 +47,7 @@ description: "Conflo CRM Knowledge Base. Explore step-by-step guides on setting 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('guides-search-input');
-            const cards = document.querySelectorAll('.guide-card');
+            const cards = document.querySelectorAll('.guide-list-item');
             
             if (searchInput) {
                 searchInput.addEventListener('input', (e) => {

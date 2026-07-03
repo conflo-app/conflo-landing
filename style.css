@@ -279,254 +279,62 @@ header .nav-wrapper {
     color: #ffb000;
 }
 
-/* Interactive CSS Mockup (Light whatsapp palette) */
+/* Hero Screenshot Mockup (3D Rotated and Cropped) */
 .hero-visual {
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+    padding: 1.5rem 0;
 }
 
-.mockup-container {
+.hero-image-card {
     width: 100%;
     max-width: 480px;
-    background: var(--bg-white);
-    border: 1px solid var(--card-border);
+    height: 460px;
     border-radius: 1.25rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06), 0 0 50px rgba(0, 168, 132, 0.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     overflow: hidden;
     position: relative;
+    transform: rotateX(6deg) rotateY(-18deg) rotateZ(3deg);
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
 }
 
-/* WhatsApp Mockup Components */
-.wa-header {
-    background-color: hsl(210, 20%, 93%);
-    padding: 1rem;
-    border-bottom: 1px solid var(--card-border);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+.hero-image-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 2;
 }
 
-.wa-dots {
-    display: flex;
-    gap: 0.35rem;
+.hero-image-card:hover {
+    transform: rotateX(3deg) rotateY(-8deg) rotateZ(1deg) scale(1.03);
+    box-shadow: 0 35px 70px rgba(0,0,0,0.15), 0 0 60px rgba(0, 168, 132, 0.08);
 }
 
-.wa-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.12);
+.hero-image-crop {
+    width: 175%;
+    height: 175%;
+    object-fit: cover;
+    object-position: right top;
+    position: absolute;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.wa-dot.active {
-    background-color: var(--brand-primary);
-}
-
-.wa-header-title {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    font-weight: 600;
-}
-
-.mockup-body {
-    height: 380px;
-    display: grid;
-    grid-template-columns: 0.4fr 0.6fr;
-}
-
-/* Chat list pane */
-.wa-chat-pane {
-    border-right: 1px solid var(--card-border);
-    background-color: hsl(210, 20%, 97%);
-    padding: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.mock-chat-row {
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: var(--bg-white);
-    border: 1px solid var(--card-border);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.mock-chat-row.active {
-    background-color: rgba(0, 168, 132, 0.06);
-    border-color: rgba(0, 168, 132, 0.2);
-}
-
-.mock-avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: var(--brand-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--text-white);
-}
-
-.mock-avatar-2 {
-    background-color: #3b82f6;
-}
-
-.mock-avatar-3 {
-    background-color: #ec4899;
-}
-
-.mock-chat-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    flex: 1;
-    min-w: 0;
-}
-
-.mock-chat-name {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--text-main);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.mock-chat-badge {
-    align-self: flex-start;
-    font-size: 0.55rem;
-    font-weight: 800;
-    padding: 0.05rem 0.25rem;
-    border-radius: 0.25rem;
-    background-color: var(--brand-primary);
-    color: var(--text-white);
-}
-
-/* Conflo Injected Sidebar panel */
-.conflo-sidebar-mock {
-    background-color: hsl(210, 20%, 94%);
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar-mock-header {
-    padding: 0.75rem;
-    border-bottom: 1px solid var(--card-border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bg-white);
-}
-
-.sidebar-mock-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-size: 0.75rem;
-    font-weight: 800;
-    color: var(--text-main);
-}
-
-.sidebar-mock-logo span {
-    color: var(--brand-primary);
-}
-
-.sidebar-tab-selectors {
-    display: flex;
-    border-bottom: 1px solid var(--card-border);
-    background-color: hsl(210, 20%, 92%);
-}
-
-.mock-tab-btn {
-    flex: 1;
-    border: none;
-    background: transparent;
-    padding: 0.5rem 0.25rem;
-    font-size: 0.65rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    cursor: pointer;
-    text-align: center;
-    border-bottom: 2px solid transparent;
-    transition: var(--transition-smooth);
-}
-
-.mock-tab-btn.active {
-    color: var(--brand-primary);
-    border-bottom-color: var(--brand-primary);
-    background-color: var(--bg-white);
-}
-
-.mock-tab-content {
-    flex: 1;
-    padding: 1rem;
-    overflow-y: auto;
-    font-size: 0.7rem;
-    background-color: var(--bg-white);
-}
-
-.tab-pane {
-    display: none;
-    flex-direction: column;
-    gap: 0.75rem;
-    animation: fadeIn 0.3s ease;
-}
-
-.tab-pane.active {
-    display: flex;
-}
-
-.mock-field-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.mock-label {
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
-}
-
-.mock-input {
-    background-color: var(--bg-light);
-    border: 1px solid var(--card-border);
-    padding: 0.35rem 0.5rem;
-    border-radius: 0.35rem;
-    color: var(--text-main);
-    font-size: 0.7rem;
-    outline: none;
-}
-
-.mock-badge-pill {
-    background-color: rgba(0, 168, 132, 0.08);
-    color: var(--brand-primary);
-    border: 1px solid rgba(0, 168, 132, 0.15);
-    padding: 0.1rem 0.35rem;
-    border-radius: 1rem;
-    font-size: 0.6rem;
-    font-weight: 600;
-    display: inline-block;
-    align-self: flex-start;
-}
-
-.mock-badge-pill.warning {
-    background-color: rgba(245, 158, 11, 0.08);
-    color: #d97706;
-    border-color: rgba(245, 158, 11, 0.15);
-}
-
-.mock-badge-pill.info {
-    background-color: rgba(59, 130, 246, 0.08);
-    color: #2563eb;
-    border-color: rgba(59, 130, 246, 0.15);
+.hero-image-card:hover .hero-image-crop {
+    transform: scale(1.04) translate(-1%, 1%);
 }
 
 /* Feature grid section */
@@ -1098,6 +906,23 @@ footer.site-footer {
     color: var(--brand-primary-hover);
 }
 
+/* Fix buttons inside legal-content overriding text color and text decoration */
+.legal-content a.btn {
+    text-decoration: none;
+}
+.legal-content a.btn-primary {
+    color: var(--text-white);
+}
+.legal-content a.btn-primary:hover {
+    color: var(--text-white);
+}
+.legal-content a.btn-secondary {
+    color: var(--text-main);
+}
+.legal-content a.btn-secondary:hover {
+    color: var(--text-main);
+}
+
 .legal-card {
     background: var(--bg-white);
     border: 1px solid var(--card-border);
@@ -1221,93 +1046,76 @@ footer.site-footer {
     padding: 2rem 0 7rem 0;
 }
 
-.guides-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.guide-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 1.25rem;
-    padding: 2.5rem;
+.guides-list-container {
     display: flex;
     flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.guide-list-item {
+    display: flex;
+    align-items: center;
     gap: 1.5rem;
-    transition: var(--transition-smooth);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-}
-
-.guide-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--card-hover-border);
-    box-shadow: 0 10px 30px rgba(0, 168, 132, 0.05);
-}
-
-.guide-card-icon-box {
-    width: 3.5rem;
-    height: 3.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
     border-radius: 1rem;
-    background: var(--brand-primary-glow);
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.guide-list-item:hover {
+    transform: translateX(4px);
+    border-color: var(--card-hover-border);
+    box-shadow: 0 8px 25px rgba(0, 168, 132, 0.04);
+}
+
+.guide-list-emoji {
+    font-size: 2.25rem;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
-    color: var(--brand-primary);
-    box-shadow: 0 4px 10px rgba(0, 168, 132, 0.05);
-    align-self: flex-start;
 }
 
-.guide-card-content {
+.guide-list-text {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.25rem;
 }
 
-.guide-card-content h3 {
-    font-size: 1.4rem;
+.guide-list-text h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
     color: var(--text-main);
     margin: 0;
+    transition: color var(--transition-smooth);
 }
 
-.guide-card-content p {
+.guide-list-item:hover .guide-list-text h3 {
+    color: var(--brand-primary);
+}
+
+.guide-list-byline {
     color: var(--text-muted);
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
 }
 
-.guide-card-topics {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border-top: 1px solid var(--card-border);
-    padding-top: 1rem;
+.guide-list-arrow {
+    font-size: 1.5rem;
+    color: var(--text-dim);
+    transition: var(--transition-smooth);
+    margin-left: 1rem;
 }
 
-.guide-card-topics li {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.guide-card-topics li::before {
-    content: "•";
+.guide-list-item:hover .guide-list-arrow {
     color: var(--brand-primary);
-    font-weight: bold;
-    margin-right: 0.25rem;
-}
-
-.guide-card-btn {
-    align-self: flex-start;
-    margin-top: auto;
+    transform: translateX(3px);
 }
 
 /* Guide Detail Page Styles */
@@ -1446,13 +1254,13 @@ footer.site-footer {
         font-size: 2.5rem;
     }
     
-    .guides-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .guide-list-item {
+        padding: 1.25rem 1.5rem;
+        gap: 1rem;
     }
     
-    .guide-card {
-        padding: 1.75rem;
+    .guide-list-emoji {
+        font-size: 1.75rem;
     }
     
     .guide-step-card {
